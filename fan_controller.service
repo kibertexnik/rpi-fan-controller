@@ -1,0 +1,13 @@
+[Unit]
+Description=Fan Controller Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/fan_controller
+Restart=on-failure
+User=root
+WorkingDirectory=/usr/local/bin
+
+[Install]
+WantedBy=multi-user.target
